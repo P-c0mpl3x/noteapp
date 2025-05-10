@@ -78,7 +78,30 @@ class _NoteScreenState extends State<NoteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      appBar: AppBar(),
+      drawer: Container(
+        color: Colors.amberAccent,
+        width: MediaQuery.of(context).size.width * 0.7,
+        child: Column(
+          children: [
+            Container(
+              height: 200,
+              width: MediaQuery.of(context).size.width * 0.7,
+              color: Colors.white,
+              child: Column(
+                children: [
+                  SizedBox(height: 84),
+                  SizedBox(
+                    width: 100,
+                    height: 100,
+                    child: Image(image: AssetImage('assets/images/image1.jpg')),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
       body: SafeArea(
         bottom: false,
         child: ListView.builder(
