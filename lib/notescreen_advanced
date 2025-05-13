@@ -1,0 +1,26 @@
+
+import 'package:flutter/material.dart';
+
+import 'models/note.dart';
+
+
+import 'dart:math';
+
+class AdvancedNoteScreen extends StatefulWidget {
+  const AdvancedNoteScreen({super.key});
+
+  @override
+  State<AdvancedNoteScreen> createState() => _AdvancedNoteScreenState();
+}
+class _AdvancedNoteScreenState extends State<AdvancedNoteScreen>
+{
+  final _titleController = TextEditingController();
+  final _contentController = TextEditingController();
+
+
+  void clear()
+  {
+    _titleController.dispose();
+    _contentController.dispose();
+  }
+}
