@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:zzz/mainscreen.dart';
+import 'package:provider/provider.dart';
+import 'package:zzz/controllers/note_controller.dart';
+import 'package:zzz/views/mainscreen.dart';
 
 
 
@@ -12,9 +14,12 @@ class   MyApp extends StatelessWidget {
   
 @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const MainScreen(), 
+    return ChangeNotifierProvider(
+      create: (context) => NoteController(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const MainScreen(), 
+      ),
     );
   }
 }
